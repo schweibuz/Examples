@@ -39,7 +39,7 @@ class URLConnectionTest
 
             connection.connect();
 
-            // print header fields
+            // printCheck header fields
 
             Map<String, List<String>> headers = connection.getHeaderFields();
             for (Map.Entry<String, List<String>> entry : headers.entrySet())
@@ -49,7 +49,7 @@ class URLConnectionTest
                     System.out.println(key + ": " + value);
             }
 
-            // print convenience functions
+            // printCheck convenience functions
 
             System.out.println("----------");
             System.out.println("getContentType: " + connection.getContentType());
@@ -62,7 +62,7 @@ class URLConnectionTest
 
             Scanner in = new Scanner(connection.getInputStream());
 
-            // print first ten lines of contents
+            // printCheck first ten lines of contents
 
             for (int n = 1; in.hasNextLine() && n <= 10; n++)
                 System.out.println(in.nextLine());

@@ -74,7 +74,7 @@ class LinkedList {
         if( p.current.next != null )
             p.current.next = p.current.next.next;  // Bypass deleted node
     }
-    // Simple print method
+    // Simple printCheck method
 
     public static void printList( LinkedList theList ) {
         if( theList.isEmpty( ) )

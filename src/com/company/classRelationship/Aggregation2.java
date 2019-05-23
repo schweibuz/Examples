@@ -5,7 +5,7 @@ class Aggregation2 {
         MegaOfficeSuiteDVD dvd = new MegaOfficeSuiteDVD();
         Computerr c = new Computerr(dvd);
         System.out.println("\nBrowsing the internet...");
-        System.out.println("Writing some source code...");
+        System.out.println("Writing check source code...");
         c.dvdStuff();
         System.out.println("Saving work...\n");
         c.allDone();

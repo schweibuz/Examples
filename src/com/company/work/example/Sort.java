@@ -31,7 +31,7 @@ class Sort {
         System.out.print("\nInsertedSort execution: " + (System.currentTimeMillis() - time + "ms\n\n"));
 
         time = System.currentTimeMillis();
-        System.out.println(chooseMax(array) + " \nMax value print out execution: " + (System.currentTimeMillis() - time + "ms\n"));
+        System.out.println(chooseMax(array) + " \nMax value printCheck out execution: " + (System.currentTimeMillis() - time + "ms\n"));
 
 //        System.out.println(chooseMin(array) + "\nMin value");
 //

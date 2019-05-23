@@ -116,6 +116,6 @@ class DryFeed implements Feed {
 class WetFeed implements Feed {
     @Override
     public void type() {
-        System.out.println("I want some dry feed.");
+        System.out.println("I want check dry feed.");
     }
 }

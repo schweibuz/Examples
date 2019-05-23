@@ -16,7 +16,7 @@ class EqHash {
         System.out.println(eqHash.equals(eqHash3));
         System.out.println(eqHash2.equals(eqHash3));
         System.out.println(eqHash.equals(eqHash));
-        System.out.println("some class: " + eqHash.equals(some));
+        System.out.println("check class: " + eqHash.equals(some));
         System.out.println("null: " + eqHash.equals(null));
     }
 

@@ -20,7 +20,7 @@ class GenericReflectionTest
 
         try
         {
-            // print generic info for class and public methods
+            // printCheck generic info for class and public methods
             Class<?> cl = Class.forName(name);
             printClass(cl);
             for (Method m : cl.getDeclaredMethods())

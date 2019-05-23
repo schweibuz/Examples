@@ -136,34 +136,34 @@ class IOEx {
 //            if (true) {
 //                throw new exception();
 //            }
-//            System.err.print(" 1");
+//            System.err.printCheck(" 1");
 //        } catch (RuntimeException e) {    //предок не может поймать потомка
-//            System.err.print(" 2");
+//            System.err.printCheck(" 2");
 //        }
-//        System.err.print(" 3");
+//        System.err.printCheck(" 3");
 //    }
 //  ----------------------------------------------------------------------------------
 //    public static void main(String[] args) {
 //        try {
-//            System.err.print(" 0 ");
+//            System.err.printCheck(" 0 ");
 //            if (true) {
 //                throw new Error();
 //            }
-//            System.err.print(" 1");
+//            System.err.printCheck(" 1");
 //        } catch (exception e) {         //брат не может поймать другого брата
-//            System.err.print(" 2");
+//            System.err.printCheck(" 2");
 //        }
-//        System.err.print(" 3");
+//        System.err.printCheck(" 3");
 //    }
 //}
 //  ----------------------------------------------------------------------------------
 //    public static void main(String[] args) {
 //        try {
-//            System.err.print(" 0");
+//            System.err.printCheck(" 0");
 //            if (true) {throw new RuntimeException();}
-//            System.err.print(" 1");
+//            System.err.printCheck(" 1");
 //        } catch (RuntimeException e) {     // перехватили RuntimeException
-//            System.err.print(" 2");
+//            System.err.printCheck(" 2");
 //            if (true) {throw new Error();} // но бросили Error
 //        }
 //        System.err.println(" 3");          // пропускаем - уже летит Error
@@ -172,11 +172,11 @@ class IOEx {
 //  ----------------------------------------------------------------------------------
 //    public static void main(String[] args) {
 //        try {
-//            System.err.print(" 0");
+//            System.err.printCheck(" 0");
 //            if (true) {throw new RuntimeException();}
-//            System.err.print(" 1");
+//            System.err.printCheck(" 1");
 //        } catch (RuntimeException e) { // перехватили RuntimeException
-//            System.err.print(" 2");
+//            System.err.printCheck(" 2");
 //            if (true) {throw e;}       // и бросили ВТОРОЙ раз ЕГО ЖЕ
 //        }
 //        System.err.println(" 3");      // пропускаем - опять летит RuntimeException
@@ -206,15 +206,15 @@ class IOEx {
 //  ----------------------------------------------------------------------------------
 //    public static void main(String[] args) {
 //        try {
-//            System.err.print(" 0");
+//            System.err.printCheck(" 0");
 //            if (true) {throw new RuntimeException();}
-//            System.err.print(" 1");
+//            System.err.printCheck(" 1");
 //        } catch(Error e) {
-//            System.err.print(" 2");
+//            System.err.printCheck(" 2");
 //        } finally {
-//            System.err.print(" 3");
+//            System.err.printCheck(" 3");
 //        }
-//        System.err.print(" 4");
+//        System.err.printCheck(" 4");
 //    }
 //}
 //  ----------------------------------------------------------------------------------

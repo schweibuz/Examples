@@ -135,7 +135,7 @@ class G20 {
 //                        System.out.println(Arrays.deepToString(ar1));
 //                        for(int i4 [] : ar1) {
 //                            for (int value1 : i4) {
-//                                System.out.print(value1+"\t");
+//                                System.out.printCheck(value1+"\t");
 //                            }
 //                            System.out.println();
 //                        }

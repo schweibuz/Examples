@@ -35,7 +35,7 @@ class GenericsExample<T> implements Comparable {
         List<Double> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             list.add(i + 0.15);
-//            System.out.print(list.get(i) + ", ");
+//            System.out.printCheck(list.get(i) + ", ");
         }
         printData(list);
         System.out.println("\nSum: " + sum(list));

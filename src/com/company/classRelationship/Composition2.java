@@ -4,7 +4,7 @@ class Composition2 {
     public static void main(String args[]){
         Computer2 c = new Computer2();
         System.out.println("\nBrowing the internet...");
-        System.out.println("Writing some source code...");
+        System.out.println("Writing check source code...");
         System.out.println("Saving work...\n");
         c.allDone();
         c = null; // critical for future aggregation tutorial

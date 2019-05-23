@@ -2,15 +2,15 @@ package com.spring2019.interviewQuestions.java8;
 
 import java.util.function.BiFunction;
 
-class Lambda {
+class MethodReference {
     public static void main(String[] args) {
 
 //        predefined functional interface Runnable to refer static method
-        Thread t = new Thread(Lambda::methodReference);
+        Thread t = new Thread(MethodReference::methodReference);
         t.start();
 
 //        referring a static method to it's functional method say()
-        Sayable sayable = Lambda::methodReference;
+        Sayable sayable = MethodReference::methodReference;
         sayable.say();
 
 //        BiFunctional interface
