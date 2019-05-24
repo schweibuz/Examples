@@ -48,7 +48,7 @@ class Pet {
         );
         petList.add(
                 new Pet("Vasik", 6, Sex.MALE,
-                        IsoChronology.INSTANCE.date(2013, 12, 7))
+                        IsoChronology.INSTANCE.date(2012, 12, 7))
         );
         petList.add(
                 new Pet("Met", 7, Sex.FEMALE,

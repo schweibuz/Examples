@@ -47,6 +47,12 @@ class CheckPetListLambda {
         processElements(petList, pet -> pet.getAge() >= 4 && pet.getSex() == Sex.FEMALE,
                 pet -> pet.getName(), s -> System.out.println(s));
 
+        System.out.println("\nLambda expression with stream():");
+        petList.stream()
+                .filter(pet -> pet.getWeight() > 5 && pet.getAge() > 5)
+                .map(pet -> pet.getName())
+                .forEach(s -> System.out.println(s));
+
 
     }
 
