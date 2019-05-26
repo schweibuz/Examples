@@ -56,7 +56,7 @@ class CheckPetListLambda {
 
     }
 
-    void Heroid() {
+    void Heroid() {     //example for reference method in main
         System.out.println("\nmethod reference HEr");
     }
 
@@ -70,7 +70,7 @@ class CheckPetListLambda {
 
     static void printPetWithPredicate(List<Pet> pet, Predicate<Pet> tester) {
         for (Pet p : pet) {
-            if (tester.test(p)) {   //instead CheckPet
+            if (tester.test(p)) {   //instead CheckPet .check() method
                 p.print();
             }
         }
