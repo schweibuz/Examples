@@ -3,6 +3,7 @@ package com.spring2019.interviewQuestions.java8.lambda.refmethod;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 class Main {
@@ -32,5 +33,12 @@ class Main {
                 .andThen(StringBuilder::toString)
                 .apply(" ABCDEFG ");
         System.out.println(str);
+
+        Consumer<Integer> consumer = (y) ->
+        {
+            System.out.println("y = " + y);
+            System.out.println("y * y = " + y * y);
+        };
+        consumer.accept(6);
     }
 }
