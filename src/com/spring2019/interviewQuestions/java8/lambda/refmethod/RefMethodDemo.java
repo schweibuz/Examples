@@ -3,10 +3,8 @@ package com.spring2019.interviewQuestions.java8.lambda.refmethod;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
-class Main {
+class RefMethodDemo {
     public static void main(String[] args) {
 
         List<Bicycle> bicycles = Bicycle.createBicycles();
@@ -25,20 +23,5 @@ class Main {
         //if this just calls one method, we can use a method reference
         bicycles.forEach(System.out::println);
 
-        Function<String, String> trim = String::trim;
-        String str = trim
-                .andThen(String::toLowerCase)
-                .andThen(StringBuilder::new)
-                .andThen(StringBuilder::reverse)
-                .andThen(StringBuilder::toString)
-                .apply(" ABCDEFG ");
-        System.out.println(str);
-
-        Consumer<Integer> consumer = (y) ->
-        {
-            System.out.println("y = " + y);
-            System.out.println("y * y = " + y * y);
-        };
-        consumer.accept(6);
     }
 }
