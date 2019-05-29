@@ -36,5 +36,9 @@ class LambdaL {
                     System.out.print(item.intValue());
                     System.out.print(" ");
                 });
+
+        List<String> stringList = Arrays.asList("May", "June", "July");
+        List<String> stringResultList = stringList.stream().collect(Collectors.toList());
+        System.out.println("\nResult list of collect() method:" + stringResultList);
     }
 }

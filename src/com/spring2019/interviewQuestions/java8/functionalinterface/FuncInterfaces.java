@@ -1,6 +1,12 @@
 package com.spring2019.interviewQuestions.java8.functionalinterface;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+import java.util.StringJoiner;
 import java.util.function.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 class FuncInterfaces {
     public static void main(String[] args) {
@@ -45,6 +51,62 @@ class FuncInterfaces {
 
         MyFunctionalInterface functionalInterface = z -> System.out.println(z);
         functionalInterface.add(99);
+
+        Function<Long, Long> adder = new AddThree();
+        Long result = adder.apply((long) 4);
+        System.out.println(result);
+
+        //can also implement the Function interface using lambda expression
+        Function<Long, Long> adderLambda = (value) -> value + 3;
+        Long resultLambda = adderLambda.apply((long) 4);
+        System.out.println(resultLambda);
+
+        IntPredicate intPredicate = a -> a > 5;
+        System.out.println(intPredicate.test(4));
+
+        IntBinaryOperator intBinaryOperator = (q, w) -> q * w;
+        System.out.println(intBinaryOperator.applyAsInt(5, 10));
+
+        IntConsumer intConsumer = e -> System.out.println(e);
+        intConsumer.accept(21);
+
+        BiConsumer biConsumer = (u, i) -> System.out.println(u + "–" + i);
+        biConsumer.accept(3, 7);
+
+        ToIntFunction toIntFunction = p -> p.hashCode();
+        System.out.println(toIntFunction.applyAsInt(0.23f));
+
+        UnaryOperator<String> unaryOperator = h -> h + " I'm here.";
+        System.out.println(unaryOperator.apply("Hi there"));
+
+        StringJoiner stringJoiner = new StringJoiner(".");
+        stringJoiner.add("A").add("C");
+        System.out.println(stringJoiner);
+
+        Random random = new Random();
+        random.ints().limit(10).forEach(i -> System.out.println(i));
+
+        List<Integer> numbers = Arrays.asList(3, 2, 3, 2, 7, 4, 8);
+        List<Integer> squareList = numbers.stream().map(i -> i * i)
+                .distinct().collect(Collectors.toList());
+        System.out.println("SquareList:" + squareList);
+
+        List<String> emptyStrings = Arrays.asList(" ", "Summer", "", "Winter", "");
+        long n = emptyStrings.stream().filter(s -> s.isEmpty()).count();
+        System.out.println(n);
+
+        Stream<Integer> intLimit = squareList.stream().limit(3);
+        List<Integer> intLimitList= intLimit.collect(Collectors.toList());
+        System.out.println("Limit:" + intLimitList);
+
+
+    }
+}
+
+class AddThree implements Function<Long, Long> {
+    @Override
+    public Long apply(Long aLong) {
+        return aLong + 3;
     }
 }
 
