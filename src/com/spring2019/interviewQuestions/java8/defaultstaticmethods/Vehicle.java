@@ -1,4 +1,4 @@
-package com.spring2019.interviewQuestions.java8.defaultmethods;
+package com.spring2019.interviewQuestions.java8.defaultstaticmethods;
 
 interface Vehicle {
     default void print() {

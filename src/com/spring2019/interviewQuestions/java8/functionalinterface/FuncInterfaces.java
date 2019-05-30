@@ -1,9 +1,6 @@
 package com.spring2019.interviewQuestions.java8.functionalinterface;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import java.util.StringJoiner;
+import java.util.*;
 import java.util.function.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -86,7 +83,7 @@ class FuncInterfaces {
         Random random = new Random();
         random.ints().limit(10).forEach(i -> System.out.println(i));
 
-        List<Integer> numbers = Arrays.asList(3, 2, 3, 2, 7, 4, 8);
+        List<Integer> numbers = Arrays.asList(3, 2, 3, 2, 7, 4, 8, 12);
         List<Integer> squareList = numbers.stream().map(i -> i * i)
                 .distinct().collect(Collectors.toList());
         System.out.println("SquareList:" + squareList);
@@ -98,6 +95,19 @@ class FuncInterfaces {
         Stream<Integer> intLimit = squareList.stream().limit(3);
         List<Integer> intLimitList= intLimit.collect(Collectors.toList());
         System.out.println("Limit:" + intLimitList);
+
+        squareList.stream().limit(10).sorted().forEach(s -> System.out.print(s + " "));
+
+        long count = emptyStrings.parallelStream().filter(s -> s.isEmpty()).count();
+        System.out.println("\nParallelSt count:" + count);
+
+        List<Integer> num = squareList;
+        IntSummaryStatistics stats = num.stream().mapToInt(v -> v).summaryStatistics();
+        System.out.println("Highest number in list:" + stats.getMax());
+        System.out.println("Lowest number in List:" + stats.getMin());
+        System.out.println("Sum of all numbers:" + stats.getSum());
+        System.out.println("Average of all numbers:" + stats.getAverage());
+
 
 
     }
