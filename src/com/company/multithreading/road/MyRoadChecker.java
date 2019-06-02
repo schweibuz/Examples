@@ -3,7 +3,7 @@ package com.company.multithreading.road;
 import java.io.*;
 import java.util.Date;
 
-public class MyRoadChecker implements RoadChecker {
+class MyRoadChecker implements RoadChecker {
 
     @Override
     public int getRestrictedRoads(String fileName, Date date) {
