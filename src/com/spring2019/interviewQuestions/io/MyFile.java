@@ -2,7 +2,7 @@ package com.spring2019.interviewQuestions.io;
 
 import java.io.*;
 
-class MyFile implements Serializable {
+public class MyFile implements Serializable {
 
     public static void main(String[] args) {
 
