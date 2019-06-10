@@ -21,8 +21,9 @@ class SQLEx {
         }
 
         LOG.log(Level.INFO,"Hello logging: {0}", sqlEx.nullPointer(50000,3));
-        fileHandler = new FileHandler("/Users/iMac/Desktop/New.txt");
+        fileHandler = new FileHandler("/Users/andmat/Desktop/New.txt");
 
+        LOG.addHandler(fileHandler);
         LOG.log(Level.INFO, "HELO MY WORLD INVALID PARAM: {0}, {1}", new Object[] {LOG.getParent(),
                 LOG.getClass().getPackage()});
 

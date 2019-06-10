@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-06-10T17:34:25</date>
+  <millis>1560177265530</millis>
+  <sequence>0</sequence>
+  <logger>com.spring2019.interviewQuestions.core.logging.LogDemo</logger>
+  <level>WARNING</level>
+  <class>com.spring2019.interviewQuestions.core.logging.LogDemo</class>
+  <method>handler</method>
+  <thread>1</thread>
+  <message>This is a warning.</message>
+</record>
+<record>
+  <date>2019-06-10T17:34:25</date>
+  <millis>1560177265557</millis>
+  <sequence>1</sequence>
+  <logger>com.spring2019.interviewQuestions.core.logging.LogDemo</logger>
+  <level>SEVERE</level>
+  <class>com.spring2019.interviewQuestions.core.logging.LogDemo</class>
+  <method>handler</method>
+  <thread>1</thread>
+  <message>This is a warning2.</message>
+</record>
+<record>
+  <date>2019-06-10T17:34:25</date>
+  <millis>1560177265558</millis>
+  <sequence>2</sequence>
+  <logger>com.spring2019.interviewQuestions.core.logging.LogDemo</logger>
+  <level>INFO</level>
+  <class>com.spring2019.interviewQuestions.core.logging.LogDemo</class>
+  <method>handler</method>
+  <thread>1</thread>
+  <message>Hi</message>
+</record>
+</log>

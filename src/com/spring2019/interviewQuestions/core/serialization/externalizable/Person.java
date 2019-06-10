@@ -1,4 +1,4 @@
-package com.spring2019.interviewQuestions.core.serialization;
+package com.spring2019.interviewQuestions.core.serialization.externalizable;
 
 import java.io.*;
 

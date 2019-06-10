@@ -8,7 +8,7 @@ class SortTestTest {
     void mergeSortMain() {
         int[] actual = { 5, 1, 6, 2, 3, 4 };
         int[] expected = { 1, 2, 3, 4, 5, 6 };
-//        SortTest.mergeSortMain(actual, actual.length);
-//        assertArrayEquals(expected, actual);
+        SortTest.mergeSortMain(actual, actual.length);
+        assertArrayEquals(expected, actual);
     }
 }

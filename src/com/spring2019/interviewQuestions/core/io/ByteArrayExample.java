@@ -1,4 +1,4 @@
-package com.spring2019.interviewQuestions.io;
+package com.spring2019.interviewQuestions.core.io;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
