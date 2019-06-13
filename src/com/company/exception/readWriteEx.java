@@ -6,10 +6,10 @@ import java.io.*;
  * Created by iMac on 04/12/2017.
  */
 class readWriteEx {
+
+    private static final String path = "/Users/andmat/desktop/IO/new.txt";
+
     public static void main(String[] args) throws IOException {
-        final String path = "/Users/iMac/Desktop/stopi/new.txt";
-        final String path2 = "/Users/iMac/Desktop/main/cards";
-        final String test = "/Users/iMac/Desktop/stopi/new2";
         readWriteEx.bufferReader(path);
         readWriteEx.fileReader(path);
     }

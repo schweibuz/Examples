@@ -19,9 +19,9 @@ class LogDemo {
 
     static void handler() {
         try {
-            FileOutputStream fout1 = new FileOutputStream(MyFile.getFileOut2(), true);
-            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-            StreamHandler streamHandler = new StreamHandler(outputStream, new SimpleFormatter());
+            FileOutputStream fout = new FileOutputStream(MyFile.getFileOut2(), true);
+            ByteArrayOutputStream byteOStream = new ByteArrayOutputStream();
+            StreamHandler streamHandler = new StreamHandler(byteOStream, new SimpleFormatter());
             streamHandler.setLevel(Level.ALL);
 //            LOG.setUseParentHandlers(false);
 
@@ -33,8 +33,8 @@ class LogDemo {
             LOG.log(Level.SEVERE, "This is a warning2.: {0}", file);
             LOG.info("Bye!");
 
-            outputStream.writeTo(System.out);
-            outputStream.close();
+            byteOStream.writeTo(System.out);
+            byteOStream.close();
         } catch (IOException e) {
             LOG.log(Level.INFO, e.getMessage());
         }
