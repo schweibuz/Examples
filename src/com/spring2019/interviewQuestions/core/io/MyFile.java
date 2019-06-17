@@ -12,10 +12,10 @@ public class MyFile implements Serializable {
 
     }
 
-    private static final File fileIn = new File("/users/andmat/desktop/in.txt");
-    private static final File fileOut1 = new File("/users/andmat/desktop/out.txt");
-    private static final File fileOut2 = new File("/users/andmat/desktop/ou2.txt");
-    private static final File fileSuf = new File("/users/andmat/desktop/suffix.txt");
+    private static final File fileIn = new File("/users/andmat/desktop/IO/in.txt");
+    private static final File fileOut1 = new File("/users/andmat/desktop/IO/out.txt");
+    private static final File fileOut2 = new File("/users/andmat/desktop/IO/ou2.txt");
+    private static final File fileSuf = new File("/users/andmat/desktop/IO/suffix.txt");
     private final int sample = 1917;
 
     public void writeToInTxt() {
